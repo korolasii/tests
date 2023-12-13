@@ -14,7 +14,7 @@ public class UserChooseGUI extends JFrame {
     String nameUser2;
     String nameUser3;
     String nameUser4;
-    public String nameAcc;
+    public static Person person = new Person();
     public UserChooseGUI(){
         setTitle("UserChooseGUI");
         int width = 450;
@@ -90,8 +90,7 @@ public class UserChooseGUI extends JFrame {
             mainGUI = new MainGUI();
             mainGUI.showFrame();
             mainGUI.userNameTXT.setText("Account: "+e.getActionCommand());
-            nameAcc = e.getActionCommand();
-            System.out.println(nameAcc);
+            person.name = e.getActionCommand();
         }
     }
 }

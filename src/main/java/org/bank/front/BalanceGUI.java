@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class BalanceGUI extends JFrame {
     private MainGUI mainGUI;
     CreateJTextField createJTextField = new CreateJTextField();
-     BalanceGUI(String name) {
+     BalanceGUI() {
         setTitle("BalanceGUI");
         int width = 450;
         int height = 150;
@@ -19,15 +19,8 @@ public class BalanceGUI extends JFrame {
         setLayout(new BorderLayout());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        Person person = new Person();
-        person.name = name;
-
-         System.out.println(person.name);
-         System.out.println(name);
-
-
         //JTextField
-         JTextField txt = createJTextField.create("Balance: " + person.balance(),24,0);
+         JTextField txt = createJTextField.create("Balance: " + UserChooseGUI.person.balance(),24,0);
          txt.setForeground(Color.BLACK);
          add(txt);
 

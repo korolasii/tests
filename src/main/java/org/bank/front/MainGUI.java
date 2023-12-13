@@ -84,8 +84,7 @@ public class MainGUI extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if ("balance".equals(e.getActionCommand())){
                 dispose();
-                System.out.println(new UserChooseGUI().nameAcc);
-                balanceGUI = new BalanceGUI(new UserChooseGUI().nameAcc);
+                balanceGUI = new BalanceGUI();
                 balanceGUI.showFrame();
             }
         }
